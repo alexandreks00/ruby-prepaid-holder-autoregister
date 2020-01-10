@@ -1,0 +1,304 @@
+{
+  "definitions": {},
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "data"
+  ],
+  "properties": {
+    "data": {
+      "$id": "#/properties/data",
+      "type": "object",
+      "title": "The Data Schema",
+      "required": [
+        "active",
+        "created_at",
+        "updated_at",
+        "id",
+        "name",
+        "description",
+        "segments",
+        "operations",
+        "card_configurations",
+        "product",
+        "processor",
+        "modality_configurations"
+      ],
+      "properties": {
+        "active": {
+          "$id": "#/properties/data/properties/active",
+          "type": "boolean",
+          "title": "The Active Schema",
+          "default": false,
+          "examples": [
+            true
+          ]
+        },
+        "created_at": {
+          "$id": "#/properties/data/properties/created_at",
+          "type": "string",
+          "title": "The Created_at Schema",
+          "default": "",
+          "examples": [
+            "2019-10-24T20:10:50.984Z"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "updated_at": {
+          "$id": "#/properties/data/properties/updated_at",
+          "type": "string",
+          "title": "The Updated_at Schema",
+          "default": "",
+          "examples": [
+            "2019-10-24T20:10:50.984Z"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "id": {
+          "$id": "#/properties/data/properties/id",
+          "type": "integer",
+          "title": "The Id Schema",
+          "default": 0,
+          "examples": [
+            0
+          ]
+        },
+        "name": {
+          "$id": "#/properties/data/properties/name",
+          "type": "string",
+          "title": "The Name Schema",
+          "default": "",
+          "examples": [
+            "string"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "description": {
+          "$id": "#/properties/data/properties/description",
+          "type": "string",
+          "title": "The Description Schema",
+          "default": "",
+          "examples": [
+            "string"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "segments": {
+          "$id": "#/properties/data/properties/segments",
+          "type": "array",
+          "title": "The Segments Schema",
+          "items": {
+            "$id": "#/properties/data/properties/segments/items",
+            "type": "object",
+            "title": "The Items Schema",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "$id": "#/properties/data/properties/segments/items/properties/id",
+                "type": "integer",
+                "title": "The Id Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              }
+            }
+          }
+        },
+        "operations": {
+          "$id": "#/properties/data/properties/operations",
+          "type": "array",
+          "title": "The Operations Schema",
+          "items": {
+            "$id": "#/properties/data/properties/operations/items",
+            "type": "object",
+            "title": "The Items Schema",
+            "required": [
+              "id",
+              "fee_amount"
+            ],
+            "properties": {
+              "id": {
+                "$id": "#/properties/data/properties/operations/items/properties/id",
+                "type": "integer",
+                "title": "The Id Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "fee_amount": {
+                "$id": "#/properties/data/properties/operations/items/properties/fee_amount",
+                "type": "integer, float",
+                "title": "The Fee_amount Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              }
+            }
+          }
+        },
+        "card_configurations": {
+          "$id": "#/properties/data/properties/card_configurations",
+          "type": "array",
+          "title": "The Card_configurations Schema",
+          "items": {
+            "$id": "#/properties/data/properties/card_configurations/items",
+            "type": "object",
+            "title": "The Items Schema",
+            "required": [
+              "plastic",
+              "image"
+            ],
+            "properties": {
+              "plastic": {
+                "$id": "#/properties/data/properties/card_configurations/items/properties/plastic",
+                "type": "object",
+                "title": "The Plastic Schema",
+                "required": [
+                  "id"
+                ],
+                "properties": {
+                  "id": {
+                    "$id": "#/properties/data/properties/card_configurations/items/properties/plastic/properties/id",
+                    "type": "integer",
+                    "title": "The Id Schema",
+                    "default": 0,
+                    "examples": [
+                      0
+                    ]
+                  }
+                }
+              },
+              "image": {
+                "$id": "#/properties/data/properties/card_configurations/items/properties/image",
+                "type": "object",
+                "title": "The Image Schema",
+                "required": [
+                  "id"
+                ],
+                "properties": {
+                  "id": {
+                    "$id": "#/properties/data/properties/card_configurations/items/properties/image/properties/id",
+                    "type": "integer",
+                    "title": "The Id Schema",
+                    "default": 0,
+                    "examples": [
+                      0
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "product": {
+          "$id": "#/properties/data/properties/product",
+          "type": "object",
+          "title": "The Product Schema",
+          "required": [
+            "id",
+            "commercial_origin"
+          ],
+          "properties": {
+            "id": {
+              "$id": "#/properties/data/properties/product/properties/id",
+              "type": "integer",
+              "title": "The Id Schema",
+              "default": 0,
+              "examples": [
+                0
+              ]
+            },
+            "commercial_origin": {
+              "$id": "#/properties/data/properties/product/properties/commercial_origin",
+              "type": "object",
+              "title": "The Commercial_origin Schema",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "$id": "#/properties/data/properties/product/properties/commercial_origin/properties/id",
+                  "type": "integer",
+                  "title": "The Id Schema",
+                  "default": 0,
+                  "examples": [
+                    0
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "processor": {
+          "$id": "#/properties/data/properties/processor",
+          "type": "object",
+          "title": "The Processor Schema",
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "$id": "#/properties/data/properties/processor/properties/id",
+              "type": "integer",
+              "title": "The Id Schema",
+              "default": 0,
+              "examples": [
+                0
+              ]
+            }
+          }
+        },
+        "modality_configurations": {
+          "$id": "#/properties/data/properties/modality_configurations",
+          "type": "array",
+          "title": "The Modality_configurations Schema",
+          "items": {
+            "$id": "#/properties/data/properties/modality_configurations/items",
+            "type": "object",
+            "title": "The Items Schema",
+            "required": [
+              "modality_configuration_type",
+              "value"
+            ],
+            "properties": {
+              "modality_configuration_type": {
+                "$id": "#/properties/data/properties/modality_configurations/items/properties/modality_configuration_type",
+                "type": "object",
+                "title": "The Modality_configuration_type Schema",
+                "required": [
+                  "id"
+                ],
+                "properties": {
+                  "id": {
+                    "$id": "#/properties/data/properties/modality_configurations/items/properties/modality_configuration_type/properties/id",
+                    "type": "integer",
+                    "title": "The Id Schema",
+                    "default": 0,
+                    "examples": [
+                      0
+                    ]
+                  }
+                }
+              },
+              "value": {
+                "$id": "#/properties/data/properties/modality_configurations/items/properties/value",
+                "type": "integer",
+                "title": "The Value Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

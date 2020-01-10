@@ -1,0 +1,73 @@
+{
+    "definitions": {},
+    "$id": "http://example.com/root.json",
+    "type": "object",
+    "title": "The Root Schema",
+    "required": [
+      "data"
+    ],
+    "properties": {
+      "data": {
+        "$id": "#/properties/data",
+        "type": "object",
+        "title": "The Data Schema",
+        "required": [
+          "active",
+          "created_at",
+          "updated_at",
+          "id",
+          "name"
+        ],
+        "properties": {
+          "active": {
+            "$id": "#/properties/data/properties/active",
+            "type": "boolean",
+            "title": "The Active Schema",
+            "default": false,
+            "examples": [
+              true
+            ]
+          },
+          "created_at": {
+            "$id": "#/properties/data/properties/created_at",
+            "type": "string",
+            "title": "The Created_at Schema",
+            "default": "",
+            "examples": [
+              "2019-10-21T23:14:02.949Z"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "updated_at": {
+            "$id": "#/properties/data/properties/updated_at",
+            "type": "string",
+            "title": "The Updated_at Schema",
+            "default": "",
+            "examples": [
+              "2019-10-21T23:14:02.949Z"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "id": {
+            "$id": "#/properties/data/properties/id",
+            "type": "integer",
+            "title": "The Id Schema",
+            "default": 0,
+            "examples": [
+              0
+            ]
+          },
+          "name": {
+            "$id": "#/properties/data/properties/name",
+            "type": "string",
+            "title": "The Name Schema",
+            "default": "",
+            "examples": [
+              "string"
+            ],
+            "pattern": "^(.*)$"
+          }
+        }
+      }
+    }
+  }

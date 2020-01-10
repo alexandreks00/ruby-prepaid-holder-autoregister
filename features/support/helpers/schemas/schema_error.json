@@ -1,0 +1,31 @@
+{
+    "definitions": {},
+    "$id": "http://example.com/root.json",
+    "type": "object",
+    "title": "The Root Schema",
+    "required": [
+      "message",
+      "error_code"
+    ],
+    "properties": {
+      "message": {
+        "$id": "#/properties/message",
+        "type": "string",
+        "title": "The Message Schema",
+        "default": "",
+        "examples": [
+          "string"
+        ],
+        "pattern": "^(.*)$"
+      },
+      "error_code": {
+        "$id": "#/properties/error_code",
+        "type": "integer",
+        "title": "The Error_code Schema",
+        "default": 0,
+        "examples": [
+          0
+        ]
+      }
+    }
+  }
